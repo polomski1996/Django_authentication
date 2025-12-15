@@ -27,17 +27,25 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#login
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
+#email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
 DEFAULT_FROM_EMAIL = 'noreply@yourdomain.com'
+
+# for pillow
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR  / 'media'
+
 # settings.py
 PASSWORD_RESET_TIMEOUT = 86400  # 24 godziny w sekundach (domyślnie 259200 = 3 dni)
 
-# Application definition
 
+
+# Application definition
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'django.contrib.admin',
